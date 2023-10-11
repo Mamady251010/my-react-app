@@ -1,13 +1,22 @@
 
-function PokemonCard(){
-    return(
-<figure>
+function PokemonCard(props) {
+    const pokemon = props.pokemonBox
+0
+    return pokemon && pokemon.imgSrc ?
 
-        <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png "}/>
+        <figure>
 
-        <figcaption>Baulbasaur</figcaption>
-</figure>
-    );
+            <img src={pokemon.imgSrc} alt={pokemon.imgSrc} />
+
+            <figcaption>{pokemon.imgSrc}</figcaption>
+        </figure>
+
+
+
+
+        : <p>???</p>
 }
+
+
 
 export default PokemonCard;
